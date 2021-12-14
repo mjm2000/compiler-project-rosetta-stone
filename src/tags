@@ -1,0 +1,111 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/jimmy/UbArchive/cse443/compiler-project-rosetta-stone/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+ablock	parser.y	/^ablock:                 L_PARENTHESIS argument_list R_PARENTHESIS{$$=$2;};$/;"	l
+addSymbolTableEntry	SymbolTable.c	/^void addSymbolTableEntry(char *id,char *type, struct symbolTable* table, char* parent_id, char* /;"	f	typeref:typename:void
+addSymbolTableEntryExp	SymbolTable.c	/^void addSymbolTableEntryExp(char *id, struct symbolTable* table, char* parent_id, struct expr *v/;"	f	typeref:typename:void
+addTopChildTable	SymbolTable.c	/^void addTopChildTable(){$/;"	f	typeref:typename:void
+add_double_return_type	expression.c	/^void add_double_return_type(char *type,struct double_operand *c) {$/;"	f	typeref:typename:void
+add_left_type	expression.c	/^void add_left_type(char *type,struct double_operand *c){$/;"	f	typeref:typename:void
+add_return_type	expression.c	/^void add_return_type(char *type,struct single_operand *c) {$/;"	f	typeref:typename:void
+add_right_type	expression.c	/^void add_right_type(char *type,struct double_operand *c){$/;"	f	typeref:typename:void
+add_single_type	expression.c	/^void add_single_type(char *type,struct single_operand *c){$/;"	f	typeref:typename:void
+add_type	expression.c	/^struct type_node *add_type(char *type,struct type_node *p){$/;"	f	typeref:struct:type_node *
+argument_list	parser.y	/^argument_list:          %empty { $$=append_arg_ls(NULL,NULL); }$/;"	l
+arrow_keyword	parser.y	/^arrow_keyword:          TYPE identifier COLON {$/;"	l
+asc	runner.c	/^bool asc = false;$/;"	v	typeref:typename:bool
+ascFILE	runner.c	/^FILE *ascFILE;$/;"	v	typeref:typename:FILE *
+ascFILE	runner.c	/^FILE* ascFILE;$/;"	v	typeref:typename:FILE *
+assignable	parser.y	/^assignable:             identifier {$/;"	l
+binaryOperator	parser.y	/^binaryOperator:         ADD{$/;"	l
+checkIfEntryExists	SymbolTable.c	/^bool checkIfEntryExists(char *id, struct symbolTable* table){$/;"	f	typeref:typename:bool
+child_entry	symbolTable.h	/^    struct symbolTableEntry* child_entry;$/;"	m	struct:symbolTableEntry	typeref:struct:symbolTableEntry *
+children	symbolTable.h	/^    struct symbolTable* children[10];$/;"	m	struct:symbolTable	typeref:struct:symbolTable * [10]
+complex_type	symbolTable.h	/^    struct complexType* complex_type;$/;"	m	struct:symbolTableEntry	typeref:struct:complexType *
+compound_statement	parser.y	/^compound_statement:     FOR L_PARENTHESIS statement SEMI_COLON expression SEMI_COLON statement R/;"	l
+constant	parser.y	/^constant:               C_TRUE{$$=create_expr("Boolean",$1,NULL,NULL);} $/;"	l
+create_doper	expression.c	/^struct double_operand *create_doper(char *value,int p){$/;"	f	typeref:struct:double_operand *
+create_expr	expression.c	/^struct expr *create_expr(char *type,char *value,struct expr *left,struct expr *right){$/;"	f	typeref:struct:expr *
+create_soper	expression.c	/^struct single_operand *create_soper(char *value){$/;"	f	typeref:struct:single_operand *
+cur_p	expression.h	/^	int cur_p;$/;"	m	struct:expr	typeref:typename:int
+dblock	parser.y	/^dblock:                 L_BRACKET declaration_list R_BRACKET{$$=$2;}$/;"	l
+declaration	parser.y	/^declaration:            type_identifier COLON identifier_list {$/;"	l
+declaration_list	parser.y	/^declaration_list:       declaration SEMI_COLON declaration_list {$/;"	l
+definition	parser.y	/^definition:             struct_keyword dblock {	$/;"	l
+definition_list	parser.y	/^definition_list:        %empty$/;"	l
+double_operand	expression.h	/^struct double_operand{$/;"	s
+expr	expression.h	/^struct expr {$/;"	s
+expression	parser.y	/^expression:             constant { $$ = $1;}$/;"	l
+func_keyword	parser.y	/^func_keyword:           FUNCTION identifier COLON identifier {$/;"	l
+getEntryById	SymbolTable.c	/^struct symbolTableEntry* getEntryById(char* id, struct symbolTable* table){$/;"	f	typeref:struct:symbolTableEntry *
+getTail	SymbolTable.c	/^struct symbolTableEntry* getTail(struct symbolTableEntry* top_entry){$/;"	f	typeref:struct:symbolTableEntry *
+highest_p	expression.h	/^	int highest_p;$/;"	m	struct:expr	typeref:typename:int
+identifier	parser.y	/^identifier:             typename{ $$ = $1; } | ID ;$/;"	l
+identifier_list	parser.y	/^identifier_list:        identifier optional_assignment COMMA identifier_list {$/;"	l
+isComplex	symbolTable.h	/^    int isComplex;$/;"	m	struct:symbolTableEntry	typeref:typename:int
+left	expression.h	/^	struct expr *left;$/;"	m	struct:expr	typeref:struct:expr *
+left_types	expression.h	/^	struct type_node *left_types;$/;"	m	struct:double_operand	typeref:struct:type_node *
+main	runner.c	/^int main(int argc, char *argv[]){$/;"	f	typeref:typename:int
+memOp	parser.y	/^memOp:                  RESERVE | RELEASE;$/;"	l
+name	symbolTable.h	/^    char* name;$/;"	m	struct:symbolTableEntry	typeref:typename:char *
+next	expression.h	/^	struct type_node *next;$/;"	m	struct:type_node	typeref:struct:type_node *
+next_entry	symbolTable.h	/^    struct symbolTableEntry* next_entry;$/;"	m	struct:symbolTable	typeref:struct:symbolTableEntry *
+next_entry	symbolTable.h	/^    struct symbolTableEntry* next_entry;$/;"	m	struct:symbolTableEntry	typeref:struct:symbolTableEntry *
+non_empty_argument_list	parser.y	/^non_empty_argument_list: expression COMMA non_empty_argument_list {$/;"	l
+non_empty_parameter_list	parser.y	/^non_empty_parameter_list: parameter_declaration COMMA non_empty_parameter_list{$/;"	l
+num_children	symbolTable.h	/^    int num_children;$/;"	m	struct:symbolTable	typeref:typename:int
+num_children	symbolTable.h	/^    int num_children;$/;"	m	struct:symbolTableEntry	typeref:typename:int
+num_entries	symbolTable.h	/^    int num_entries;$/;"	m	struct:symbolTable	typeref:typename:int
+open_brace	parser.y	/^open_brace:             L_BRACE {$/;"	l
+optional_assignment	parser.y	/^optional_assignment:    %empty {$$=create_expr("","",NULL,NULL);}$/;"	l
+optional_case	parser.y	/^optional_case:          %empty$/;"	l
+optional_dblock	parser.y	/^optional_dblock:        %empty{}$/;"	l
+p	expression.h	/^	int p;$/;"	m	struct:double_operand	typeref:typename:int
+parameter_declaration	parser.y	/^parameter_declaration:  identifier COLON identifier {$/;"	l
+parameter_list	parser.y	/^parameter_list:         %empty{append_plist(NULL,NULL);}$/;"	l
+parent	symbolTable.h	/^    struct symbolTable* parent;$/;"	m	struct:symbolTable	typeref:struct:symbolTable *
+pblock	parser.y	/^pblock:                 L_PARENTHESIS parameter_list R_PARENTHESIS{$$=$2;}$/;"	l
+postUnaryOperator	parser.y	/^postUnaryOperator:      IS_NULL;$/;"	l
+preUnaryOperator	parser.y	/^preUnaryOperator:       SUB_OR_NEG{$/;"	l
+print_node	SymbolTable.c	/^void print_node(FILE *file, struct symbolTable *head, int scope){$/;"	f	typeref:typename:void
+print_symbol_table	SymbolTable.c	/^void print_symbol_table(struct symbolTable* table){$/;"	f	typeref:typename:void
+program	parser.y	/^program:                definition_list sblock{ $/;"	l
+recOp	parser.y	/^recOp:                  DOT;$/;"	l
+return_types	expression.h	/^	struct type_node *return_types;$/;"	m	struct:double_operand	typeref:struct:type_node *
+return_types	expression.h	/^	struct type_node *return_types;$/;"	m	struct:single_operand	typeref:struct:type_node *
+right	expression.h	/^	struct expr *right;$/;"	m	struct:expr	typeref:struct:expr *
+right_types	expression.h	/^	struct type_node *right_types;$/;"	m	struct:double_operand	typeref:struct:type_node *
+s	runner.c	/^bool s = false;$/;"	v	typeref:typename:bool
+sblock	parser.y	/^sblock:                 open_brace optional_dblock statement_list R_BRACE {$/;"	l
+set_new_highest	expression.c	/^struct expr *set_new_highest(struct expr *c) {$/;"	f	typeref:struct:expr *
+set_priority	expression.c	/^struct expr *set_priority(int p, struct expr *c) {$/;"	f	typeref:struct:expr *
+simple_statement	parser.y	/^simple_statement:       assignable ASSIGN expression{$/;"	l
+single_operand	expression.h	/^struct single_operand{$/;"	s
+st	SymbolTable.c	/^void st(struct symbolTable *head,FILE *file){$/;"	f	typeref:typename:void
+stFILE	runner.c	/^FILE *stFILE;$/;"	v	typeref:typename:FILE *
+statement	parser.y	/^statement:              compound_statement{$$=$1;} | simple_statement {$$=$1;}$/;"	l
+statement_list	parser.y	/^statement_list:         compound_statement statement_list {$/;"	l
+struct_keyword	parser.y	/^struct_keyword:         TYPE identifier COLON {$/;"	l
+symbolTable	symbolTable.h	/^struct symbolTable {$/;"	s
+symbolTableEntry	symbolTable.h	/^struct symbolTableEntry {$/;"	s
+table_counter	SymbolTable.c	/^int table_counter = 0;$/;"	v	typeref:typename:int
+top_table	runner.c	/^struct symbolTable top_table;$/;"	v	typeref:struct:symbolTable
+type	expression.h	/^	char *type; $/;"	m	struct:expr	typeref:typename:char *
+type	expression.h	/^	char *type;$/;"	m	struct:type_node	typeref:typename:char *
+type_identifier	parser.y	/^type_identifier:        identifier {$$ = $1;};$/;"	l
+type_node	expression.h	/^struct type_node{$/;"	s
+typecmp	expression.c	/^bool typecmp(char *value,struct type_node *head) {$/;"	f	typeref:typename:bool
+typename	parser.y	/^typename:               T_BOOLEAN | T_CHARACTER| T_STRING | T_INTEGER | T_REAL;$/;"	l
+types	expression.h	/^	struct type_node *types; $/;"	m	struct:single_operand	typeref:struct:type_node *
+value	expression.h	/^	char *value;$/;"	m	struct:double_operand	typeref:typename:char *
+value	expression.h	/^	char *value;$/;"	m	struct:expr	typeref:typename:char *
+value	expression.h	/^	char *value;$/;"	m	struct:single_operand	typeref:typename:char *
+value	symbolTable.h	/^   	struct expr *value; $/;"	m	struct:symbolTableEntry	typeref:struct:expr *

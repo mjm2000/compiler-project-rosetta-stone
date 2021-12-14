@@ -1,0 +1,62 @@
+type unaryIntFunction: (integer: x, Boolean: capital) -> integer
+type complexFunction: (unaryIntFunction: in_func, integer: y) -> integer
+type int_list: 3 -> integer
+(* This is a function definition.
+   It uses the above type definition.
+   This is a test line.
+*) 
+function square : complexFunction {
+   [integer: var_in_func := 1]
+    square := var_in_func + y;
+    y := in_func(12,12);
+}
+(* 
+   This is the main block of the program.
+   Execution begins in this block.
+*)
+{
+  [ integer: input, expected, actual ; Boolean: result ]
+  actual := square(10,12);
+  result := actual;
+}
+
+t0 = var_in_func + y
+square = t0
+a1 = 12
+a2 = 12
+jmp in_func
+y = t0
+endfunc
+a1 = 12
+a2 = 10
+jmp square
+actual = t0
+t1 = actual
+result = t1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
